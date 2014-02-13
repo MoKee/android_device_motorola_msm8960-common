@@ -26,15 +26,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8960 \
     copybit.msm8960 \
+    gps.msm8960 \
     gralloc.msm8960 \
     hwcomposer.msm8960 \
     lights.MSM8960 \
     memtrack.msm8960 \
     power.msm8960
-
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8960
 
 # Motorola
 PRODUCT_PACKAGES += \
@@ -55,10 +52,6 @@ PRODUCT_PACKAGES += \
 # EGL config
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/egl.cfg:system/lib/egl/egl.cfg
-
-# GPS configuration
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps/gps.conf:system/etc/gps.conf
 
 # Wifi
 PRODUCT_COPY_FILES += \
@@ -103,7 +96,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.ptp=0x2e30 \
     ro.usb.ptp_adb=0x2e31 \
     ro.hdmi.enable=true \
-    ro.cwm.forbid_format="/fsg,/firmware,/persist,/modem,/boot"
+    ro.cwm.forbid_format="/fsg,/firmware,/persist,/modem,/boot" \
+    mm.enable.smoothstreaming=true
 
 # Opengles version 2
 PRODUCT_PROPERTY_OVERRIDES += \
