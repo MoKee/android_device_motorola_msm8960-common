@@ -75,10 +75,6 @@ BOARD_EGL_CFG := $(LOCAL_PATH)/config/egl.cfg
 # Media
 TARGET_NO_ADAPTIVE_PLAYBACK := true
 
-# MKHW
-BOARD_USES_MOKEE_HARDWARE := true
-BOARD_HARDWARE_CLASS += hardware/mokee/mkhw
-
 # Custom relese tools
 TARGET_RELEASETOOLS_EXTENSIONS := device/motorola/msm8960-common
 
